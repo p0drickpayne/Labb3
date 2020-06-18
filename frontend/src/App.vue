@@ -3,11 +3,7 @@
     <div id="app">
       <img class="animate__animated animate__bounce" alt="Vue logo" src="./assets/logo.png" />
       <p>Hello</p>
-      <vue-tags-input
-        v-model="$store.state.tag"
-        :tags="$store.state.tags"
-        @tags-changed="newTags => $store.state.tags = newTags"
-      />
+
       <router-link to="/">Home</router-link>
       <br />
       <router-link to="/main-view">Another view</router-link>
