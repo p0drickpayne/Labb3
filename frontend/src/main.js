@@ -17,7 +17,7 @@ Vue.use(Tags)
 
 const router = new VueRouter({
   routes: [
-    { component: HelloWorldView, path: '/' },
+    { component: HelloWorldView, path: '/cat-list' },
     { component: MainView, path: '/main-view' }
   ]
 })
@@ -28,12 +28,16 @@ const store = new Vuex.Store({
     tag: '',
     tags: [],
     catPic: "",
+    catBreeds: []
   },
   mutations: {
 
     //Mutations for cat data
     setCatPic(state, newCatPic) {
       state.catPic = newCatPic
+    },
+    setCatBreeds(state, newCatBreed) {
+      state.catBreeds = newCatBreed
     }
   },
   actions: actions

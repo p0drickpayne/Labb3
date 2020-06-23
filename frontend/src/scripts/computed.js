@@ -3,12 +3,13 @@
 export const computed = {
 
     //computed properties for catpics
-    catPic: {
+    catBreed: {
         get() {
-            return this.$store.state.catPic
+            return this.$store.state.catBreeds
         },
-        set(newId) {
-            this.$store.commit('setPinId', newId)
+        set(newCatBreed) {
+            this.$store.commit('setCatBreeds', newCatBreed)
         }
     }
+
 }

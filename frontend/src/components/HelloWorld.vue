@@ -1,10 +1,30 @@
 <template>
-  <div></div>
+  <div>
+    <input type="button" value="Cat!" @click="getCat()" />
+    <div id="img-container">
+      <img id="cat" :src="$store.state.catPic" alt />
+    </div>
+    <input type="button" value="breeds" @click="getBreeds()" />
+    <ul>
+      {{$store.state.catBreeds[0]}}
+      <li :key="breed.name" v-for="breed in $store.state.catBreeds">{{breed.name}}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld"
+  name: "HelloWorld",
+
+  methods: {
+    getCat() {
+      this.$store.dispatch("getCat");
+    },
+    getBreeds() {
+      this.$store.dispatch("getCatBreeds");
+      console.log(this.$store.state.catBreeds);
+    }
+  }
 };
 </script>
 
@@ -13,15 +33,14 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#cat {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+#img-container {
+  height: 25vh;
+  width: 25vw;
+  background-color: bisque;
 }
 </style>
