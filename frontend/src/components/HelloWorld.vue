@@ -16,10 +16,12 @@
           >{{breed.name}}</li>
         </ul>
       </div>
-      <div v-if="Object.keys($store.state.catBreed).length">
-        <p>{{$store.state.catBreed.name}}</p>
+      <div v-if="Object.keys($store.state.catBreed).length" id="breed-info">
+        <h2>{{$store.state.catBreed.name}}</h2>
         <p>{{$store.state.catBreed.description}}</p>
-        <p @click="redirect()">Wiki</p>
+        <p>Life span: {{$store.state.catBreed.life_span}}</p>
+        <p>Origin: {{$store.state.catBreed.origin}}</p>
+        <p @click="redirect()">More info</p>
       </div>
     </div>
   </div>
@@ -81,6 +83,6 @@ export default {
   background-color: bisque;
 }
 input[type="button"] {
-  width: 80px;
+  width: 100px;
 }
 </style>
