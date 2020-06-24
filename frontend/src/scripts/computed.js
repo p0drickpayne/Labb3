@@ -3,12 +3,12 @@
 export const computed = {
 
     //computed properties for catpics
-    catBreed: {
+    vModel: {
         get() {
-            return this.$store.state.catBreeds
+            return this.$store.state.vmodel
         },
-        set(newCatBreed) {
-            this.$store.commit('setCatBreeds', newCatBreed)
+        set(newVModel) {
+            this.$store.commit('setVModel', newVModel)
         }
     }
 

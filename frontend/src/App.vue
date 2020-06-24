@@ -8,9 +8,10 @@
         src="./assets/logo.png"
       />
       <h1 id="title">Catter</h1>
+      <router-link class="router-link" to="/cat-list">Breeds</router-link>
+      <router-link class="router-link" to="/">Home</router-link>
     </header>
-    <router-link to="/cat-list">Breeds</router-link>
-    <router-link to="/">Home</router-link>
+
     <router-view></router-view>
   </div>
 </template>
@@ -36,6 +37,14 @@ export default {
   color: #2c3e50;
   margin: 10px;
 }
+.content {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 80vw;
+  min-height: 80vh;
+}
 #head {
   display: flex;
   flex-direction: row;
@@ -47,18 +56,23 @@ export default {
   font-weight: 900;
   margin-bottom: 20px;
 }
+.router-link {
+  position: relative;
+  padding: 10px;
+}
 #title {
   position: absolute;
   align-self: center;
   top: 5px;
   right: 45vw;
 }
+
 #logo {
   object-fit: scale-down;
   position: relative;
   top: -10px;
 }
 p {
-  word-break: break-all;
+  word-break: normal;
 }
 </style>
