@@ -23,6 +23,7 @@
         <p>Origin: {{$store.state.catBreed.origin}}</p>
         <p @click="redirect()">More info</p>
       </div>
+      <p>{{cat}}</p>
     </div>
   </div>
 </template>
@@ -30,6 +31,10 @@
 <script>
 export default {
   name: "HelloWorld",
+
+  props: {
+    cat: String
+  },
 
   methods: {
     getCat() {

@@ -21,6 +21,7 @@ import { computed } from "../scripts/computed";
 export default {
   name: "MainView",
   computed: computed,
+
   methods: {
     // getVmodel() {
     //   this.$store.dispatch("vModel");

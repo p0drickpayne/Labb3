@@ -36,6 +36,7 @@ const store = new Vuex.Store({
     vmodel: ""
 
   },
+  props: ['cat'],
   mutations: {
 
     //Mutations for cat data

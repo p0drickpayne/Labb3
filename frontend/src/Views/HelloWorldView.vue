@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HelloWorld></HelloWorld>
+    <HelloWorld cat="Hello Cat"></HelloWorld>
   </div>
 </template>
 
